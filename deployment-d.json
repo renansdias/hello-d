@@ -1,0 +1,32 @@
+{
+	"apiVersion": "extensions/v1beta1",
+	"kind": "Deployment",
+	"metadata": {
+		"name": "deployment-d"
+	},
+	"spec": {
+		"replicas": 1,
+		"template": {
+			"metadata": {
+				"labels": {
+					"app": "hello-d"
+				}
+			},
+			"spec": {
+				"containers": [
+					{
+						"name": "hello-d",
+						"image": "renansdias/hello-d:1.0.0",
+						"ports": [
+							{
+								"containerPort": 4567,
+								"hostPort": 4567,
+								"name": "hellod"
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}
