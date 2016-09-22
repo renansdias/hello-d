@@ -5,7 +5,7 @@
 		"name": "deployment-d"
 	},
 	"spec": {
-		"replicas": 1,
+		"replicas": 3,
 		"template": {
 			"metadata": {
 				"labels": {
@@ -16,7 +16,7 @@
 				"containers": [
 					{
 						"name": "hello-d",
-						"image": "renansdias/hello-d:1.0.0",
+						"image": "renansdias/hello-d:__VERSION__",
 						"ports": [
 							{
 								"containerPort": 4567,
